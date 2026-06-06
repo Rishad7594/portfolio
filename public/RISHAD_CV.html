@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammed Rishad CH – Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET & PAGE SETUP ===== */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      font-size: 9.5pt;
+      line-height: 1.45;
+      color: #111;
+      background: #d0d0d0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== PAGE CONTAINER ===== */
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 20px auto;
+      background: #ffffff;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+      padding: 24mm 22mm 18mm 22mm;
+      position: relative;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      text-align: center;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #000;
+    }
+
+    .header h1 {
+      font-size: 22pt;
+      font-weight: 700;
+      color: #000;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .header .contact-info {
+      font-size: 9pt;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+    }
+
+    .header .contact-info .separator {
+      color: #000;
+      font-weight: 600;
+    }
+
+    /* ===== SUMMARY ===== */
+    .summary {
+      font-size: 9pt;
+      color: #222;
+      text-align: justify;
+      margin-bottom: 13px;
+      padding: 9px 14px;
+      background: #f5f5f5;
+      border-left: 3px solid #000;
+      border-radius: 0 3px 3px 0;
+    }
+
+    /* ===== SECTION ===== */
+    .section {
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      border-bottom: 1.5px solid #999;
+      padding-bottom: 3px;
+      margin-bottom: 7px;
+    }
+
+    /* ===== EXPERIENCE ENTRY ===== */
+    .exp-entry {
+      margin-bottom: 9px;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+
+    .exp-header .role {
+      font-weight: 700;
+      font-size: 10pt;
+      color: #000;
+    }
+
+    .exp-header .dates {
+      font-size: 8.5pt;
+      color: #555;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .exp-company {
+      font-size: 9pt;
+      color: #333;
+      font-weight: 600;
+      margin-bottom: 1px;
+    }
+
+    .exp-project {
+      font-size: 8.5pt;
+      color: #444;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .exp-tech {
+      font-size: 8pt;
+      color: #666;
+      margin-bottom: 3px;
+    }
+
+    .exp-tech strong {
+      color: #333;
+    }
+
+    ul.bullets {
+      list-style: none;
+      padding-left: 12px;
+    }
+
+    ul.bullets li {
+      position: relative;
+      padding-left: 10px;
+      margin-bottom: 1.5px;
+      font-size: 8.5pt;
+      color: #222;
+    }
+
+    ul.bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #000;
+      font-weight: 700;
+      font-size: 8pt;
+    }
+
+    /* ===== SKILLS ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 24px;
+    }
+
+    .skill-row {
+      font-size: 8.5pt;
+      color: #222;
+    }
+
+    .skill-row strong {
+      color: #000;
+      font-weight: 600;
+    }
+
+    /* ===== EDUCATION ===== */
+    .edu-entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+
+    .edu-entry .edu-left {
+      font-size: 9pt;
+    }
+
+    .edu-entry .edu-left .degree {
+      font-weight: 600;
+      color: #000;
+    }
+
+    .edu-entry .edu-left .school {
+      color: #444;
+      font-size: 8.5pt;
+    }
+
+    .edu-entry .edu-right {
+      text-align: right;
+      font-size: 8.5pt;
+      color: #555;
+      white-space: nowrap;
+    }
+
+    /* ===== CERTIFICATIONS ===== */
+    .cert-list {
+      list-style: none;
+      padding-left: 8px;
+      margin-left: 0;
+    }
+
+    .cert-list li {
+      font-size: 8.5pt;
+      color: #222;
+      padding-left: 12px;
+      position: relative;
+      margin-bottom: 2px;
+    }
+
+    .cert-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #000;
+      font-weight: 700;
+    }
+
+    /* ===== INTERNSHIPS ===== */
+    .intern-entry {
+      margin-bottom: 6px;
+    }
+
+    .intern-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .intern-header .role {
+      font-weight: 600;
+      font-size: 9pt;
+      color: #000;
+    }
+
+    .intern-header .dates {
+      font-size: 8pt;
+      color: #555;
+    }
+
+    .intern-company {
+      font-size: 8.5pt;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .intern-desc {
+      font-size: 8.5pt;
+      color: #333;
+      margin-top: 1px;
+    }
+
+    /* ===== PROJECTS ===== */
+    .project-entry {
+      margin-bottom: 6px;
+    }
+
+    .project-name {
+      font-weight: 600;
+      font-size: 9pt;
+      color: #000;
+      display: inline;
+    }
+
+    .project-tech {
+      font-size: 8pt;
+      color: #666;
+      display: inline;
+      margin-left: 4px;
+    }
+
+    .project-desc {
+      font-size: 8.5pt;
+      color: #333;
+      margin-top: 1px;
+    }
+
+    /* ===== LANGUAGES ===== */
+    .lang-row {
+      font-size: 8.5pt;
+      color: #222;
+      padding-left: 16px;
+      margin-left: 4px;
+    }
+
+    .lang-row li {
+      margin-bottom: 2px;
+    }
+
+    /* ===== PRINT ===== */
+    @media print {
+      body {
+        background: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      .page {
+        width: 210mm;
+        height: 296mm;
+        /* Strictly A4 height to prevent spill */
+        margin: 0;
+        padding: 15mm 18mm 10mm 18mm;
+        /* Reduced padding for print */
+        box-shadow: none;
+        page-break-after: always;
+        page-break-inside: avoid;
+        overflow: hidden;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="page">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1>Muhammed Rishad CH</h1>
+      <div class="contact-info">
+        <span>Kerala, India</span>
+        <span class="separator">|</span>
+        <span>chrishad099@gmail.com</span>
+        <span class="separator">|</span>
+        <span>+91 8078922354</span>
+        <span class="separator">|</span>
+        <span>linkedin.com/in/rishadch</span>
+        <span class="separator">|</span>
+        <span>marcbe.com</span>
+      </div>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="summary">
+      Full Stack Mobile and Web Developer skilled in Flutter, React/Next.js, and Native Android.
+      Experienced in building high-performance, user-centric apps and modern websites with scalable architecture and clean UI/UX.
+      Proficient in integrating AI/ML features, REST APIs, Node.js, and Firebase. Strong data science foundation enabling
+      predictive, data-aware solutions across web and mobile platforms.
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+      <div class="section-title">Education</div>
+
+      <div class="edu-entry">
+        <div class="edu-left">
+          <span class="degree">Data Science & Artificial Intelligence</span>
+          <span class="school"> — EXCELR Solutions, Bangalore</span>
+        </div>
+        <div class="edu-right">2024 – 2025</div>
+      </div>
+
+      <div class="edu-entry">
+        <div class="edu-left">
+          <span class="degree">Bachelor of Computer Application (BCA)</span>
+          <span class="school"> — Concord Arts & Science College, Muttannur</span>
+        </div>
+        <div class="edu-right">2021 – 2024 | GPA: 5.61</div>
+      </div>
+    </div>
+
+    <!-- TECHNICAL SKILLS -->
+    <div class="section">
+      <div class="section-title">Technical Skills</div>
+      <div class="skills-grid">
+        <div class="skill-row"><strong>Languages:</strong> Dart, Java, Kotlin, JavaScript, Python, HTML</div>
+        <div class="skill-row"><strong>Mobile:</strong> Flutter, React Native, Native Android (Java/Kotlin)</div>
+        <div class="skill-row"><strong>Frontend:</strong> React.js, Next.js, Bootstrap</div>
+        <div class="skill-row"><strong>Backend:</strong> Node.js, Express, Django, FastAPI, REST APIs</div>
+        <div class="skill-row"><strong>Databases:</strong> PostgreSQL, Firebase Firestore, SQLite, MySQL, MongoDB</div>
+        <div class="skill-row"><strong>AI/ML:</strong> TensorFlow, PyTorch, Keras, Scikit-learn, PyCaret, NLP</div>
+        <div class="skill-row"><strong>Cloud & Tools:</strong> Firebase, AWS (EC2/S3), Docker, Git, Postman</div>
+        <div class="skill-row"><strong>Architecture:</strong> Clean Architecture, Provider, BLoC, CI/CD, Socket.IO</div>
+      </div>
+    </div>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <div class="section">
+      <div class="section-title">Professional Experience</div>
+
+      <!-- Pazel Global -->
+      <div class="exp-entry">
+        <div class="exp-header">
+          <span class="role">Full Stack Developer</span>
+          <span class="dates">Mar 2025 – Present</span>
+        </div>
+        <div class="exp-company">Pazel Global Technologies</div>
+        <div class="exp-project">Project: Jolee — Real-time Service Marketplace App</div>
+        <div class="exp-tech"><strong>Tech:</strong> Flutter, Node.js, Express, PostgreSQL, Knex.js, Socket.IO,
+          Provider, JWT, REST API</div>
+        <ul class="bullets">
+          <li>Designed and developed a premium Flutter frontend with adaptive light/dark themes and Provider state
+            management.</li>
+          <li>Built scalable RESTful API backend using Node.js & Express — authentication (JWT), job listings, payments,
+            and reviews.</li>
+          <li>Designed PostgreSQL database models with Knex.js migrations for secure, optimized data access.</li>
+          <li>Integrated Socket.IO for real-time chat and live notification updates between users.</li>
+        </ul>
+      </div>
+
+      <!-- BSH Technologies -->
+      <div class="exp-entry">
+        <div class="exp-header">
+          <span class="role">Full Stack Developer</span>
+          <span class="dates">Jun 2025 – Mar 2026</span>
+        </div>
+        <div class="exp-company">BSH Technologies</div>
+        <div class="exp-project">Project: Eventify — Event Discovery & Booking App</div>
+        <div class="exp-tech"><strong>Tech:</strong> Flutter, Django, Django REST Framework, JWT, PostgreSQL, Django
+          Admin, Git</div>
+        <ul class="bullets">
+          <li>Developed cross-platform Flutter frontend with responsive layouts, smooth animations, and reusable UI
+            components.</li>
+          <li>Implemented RESTful APIs using Django + DRF — user authentication (JWT), event listings, and booking
+            logic.</li>
+          <li>Designed database models for users, events, and bookings with clean relationships and scalable structure.
+          </li>
+          <li>Created Django Admin workflows and documented API endpoints for seamless front-end integration.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- INTERNSHIPS -->
+    <div class="section">
+      <div class="section-title">Internships</div>
+
+      <div class="intern-entry">
+        <div class="intern-header">
+          <span class="role">Artificial Intelligence Intern</span>
+          <span class="dates">Mar 2025 – Jun 2025</span>
+        </div>
+        <div class="intern-company">EXCELR Solutions, Bangalore</div>
+        <div class="intern-desc">Built an AI-powered finance platform with fraud detection (IsolationForest), NLP
+          sentiment analysis, and portfolio rebalancing using FastAPI, Python, and Scikit-learn.</div>
+      </div>
+
+      <div class="intern-entry">
+        <div class="intern-header">
+          <span class="role">Software Development Engineer Intern</span>
+          <span class="dates">May 2025 – Jun 2025</span>
+        </div>
+        <div class="intern-company">Bluestock Fintech</div>
+        <div class="intern-desc">Built a full-stack IPO platform with REST API, user authentication, IPO listings, and
+          AWS EC2 deployment using FastAPI/Django and JavaScript.</div>
+      </div>
+
+      <div class="intern-entry">
+        <div class="intern-header">
+          <span class="role">Data Science Intern</span>
+          <span class="dates">Jun 2024 – Apr 2025</span>
+        </div>
+        <div class="intern-company">EXCELR Solutions, Bangalore</div>
+        <div class="intern-desc">Developed a solar power prediction system using ML models (XGBoost, Scikit-learn) with
+          a Streamlit dashboard, achieving 24% reduction in energy waste.</div>
+      </div>
+    </div>
+
+  </div><!-- end page 1 -->
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="page">
+
+    <!-- FREELANCE EXPERIENCE -->
+    <div class="section">
+      <div class="section-title">Freelance Experience</div>
+
+      <div class="exp-entry">
+        <div class="exp-header">
+          <span class="role">Freelance Flutter Developer</span>
+          <span class="dates">Jun 2025 – Present</span>
+        </div>
+
+        <div class="project-entry">
+          <div class="project-name">Car Rental Admin App</div>
+          <div class="project-tech">| Flutter, Firebase, PDF Generation, Image Compression</div>
+          <div class="project-desc">
+            Cross-platform admin app for car rental management — client/vehicle management, rental tracking, expense
+            monitoring, PDF rental agreements, and secure multi-user data handling via Firebase.
+          </div>
+        </div>
+
+        <div class="project-entry" style="margin-top: 4px;">
+          <div class="project-name">Wood Quotation App</div>
+          <div class="project-tech">| Flutter, Firebase, Node.js, PDF Generation</div>
+          <div class="project-desc">
+            Cross-platform app for timber businesses to create, manage, and export detailed quotations with automated
+            cost/GST calculations, professional PDF export, and multi-device login control.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOTABLE PROJECTS -->
+    <div class="section">
+      <div class="section-title">Notable Projects</div>
+
+      <div class="project-entry">
+        <div class="project-name">AI Alarm</div>
+        <div class="project-tech">| Kotlin, Google ML Kit, CameraX, Android SDK</div>
+        <div class="project-desc">
+          Smart Android alarm app requiring facial interaction (smile + eyes open) via on-device ML to dismiss alarms.
+          Features tamper-proof foreground services, volume lock, WakeLock management, and reliable doze mode
+          triggering.
+        </div>
+      </div>
+
+      <div class="project-entry">
+        <div class="project-name">Finance AI Platform</div>
+        <div class="project-tech">| FastAPI, Python, Scikit-learn, NLP, Bootstrap</div>
+        <div class="project-desc">
+          AI-powered financial analytics dashboard combining fraud detection (IsolationForest), NLP-based sentiment
+          analysis on financial news, and portfolio rebalancing engine for risk-based investment strategies.
+        </div>
+      </div>
+
+      <div class="project-entry">
+        <div class="project-name">Solar Power Prediction System</div>
+        <div class="project-tech">| Python, Scikit-learn, XGBoost, Streamlit, SQL</div>
+        <div class="project-desc">
+          Predictive system for solar power generation in off-grid environments with MPPT optimization (18% output
+          increase), interactive Streamlit dashboard, and 24% reduction in energy waste.
+        </div>
+      </div>
+
+      <div class="project-entry">
+        <div class="project-name">IPO Web Platform</div>
+        <div class="project-tech">| FastAPI, Django, JavaScript, REST API, AWS</div>
+        <div class="project-desc">
+          Full-stack IPO information platform with secure REST API, user registration, IPO application workflows, and
+          optimized database with AWS EC2 deployment.
+        </div>
+      </div>
+
+      <div class="project-entry">
+        <div class="project-name">Marcbe Website</div>
+        <div class="project-tech">| Next.js, React, Node.js</div>
+        <div class="project-desc">
+          A high-performance modern web application built using the Next.js framework, currently live at marcbe.com, focusing on performance, SEO, and seamless user experience.
+        </div>
+      </div>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="section">
+      <div class="section-title">Certifications</div>
+      <ul class="cert-list">
+        <li>Data Science Certificate — EXCELR Solutions</li>
+        <li>Artificial Intelligence Certificate — EXCELR Solutions</li>
+        <li>Data Science Internship (9 months) — EXCELR Solutions</li>
+        <li>AI Internship (3 months) — EXCELR Solutions</li>
+        <li>SDE Internship (2 months) — Bluestock Fintech</li>
+      </ul>
+    </div>
+
+    <!-- LANGUAGES -->
+    <div class="section">
+      <div class="section-title">Languages</div>
+      <ul class="lang-row">
+        <li>English</li>
+        <li>Malayalam</li>
+        <li>Hindi</li>
+        <li>Kannada</li>
+        <li>Tamil</li>
+        <li>Arabic</li>
+      </ul>
+    </div>
+
+  </div><!-- end page 2 -->
+
+</body>
+
+</html>

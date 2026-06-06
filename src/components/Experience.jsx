@@ -1,0 +1,66 @@
+import './Experience.css';
+
+const experiences = [
+  {
+    role: 'Full Stack Developer',
+    company: 'Pazel Global Technologies',
+    dates: 'Mar 2025 – Present',
+    project: 'Project: Jolee — Real-time Service Marketplace App',
+    tech: 'Flutter, Node.js, Express, PostgreSQL, Knex.js, Socket.IO, Provider, JWT, REST API',
+    desc: [
+      'Designed and developed a premium Flutter frontend with adaptive light/dark themes and Provider state management.',
+      'Built scalable RESTful API backend using Node.js & Express — authentication (JWT), job listings, payments, and reviews.',
+      'Designed PostgreSQL database models with Knex.js migrations for secure, optimized data access.',
+      'Integrated Socket.IO for real-time chat and live notification updates between users.'
+    ]
+  },
+  {
+    role: 'Full Stack Developer',
+    company: 'BSH Technologies',
+    dates: 'Jun 2025 – Mar 2026',
+    project: 'Project: Eventify — Event Discovery & Booking App',
+    tech: 'Flutter, Django, Django REST Framework, JWT, PostgreSQL, Django Admin, Git',
+    desc: [
+      'Developed cross-platform Flutter frontend with responsive layouts, smooth animations, and reusable UI components.',
+      'Implemented RESTful APIs using Django + DRF — user authentication (JWT), event listings, and booking logic.',
+      'Designed database models for users, events, and bookings with clean relationships and scalable structure.',
+      'Created Django Admin workflows and documented API endpoints for seamless front-end integration.'
+    ]
+  }
+];
+
+export default function Experience() {
+  return (
+    <section id="experience" className="exp-section">
+      <div className="container">
+        <span className="section-label">Career</span>
+        <h2 className="section-title">
+          Professional <span className="gradient-text">Experience</span>
+        </h2>
+        
+        <div className="exp-timeline">
+          {experiences.map((exp, i) => (
+            <div key={i} className="exp-item glass-card animate-in" style={{ animationDelay: `${i * 0.2}s` }}>
+              <div className="exp-header">
+                <div>
+                  <h3 className="exp-role">{exp.role}</h3>
+                  <div className="exp-company">{exp.company}</div>
+                </div>
+                <div className="exp-dates">{exp.dates}</div>
+              </div>
+              
+              <div className="exp-project">{exp.project}</div>
+              <div className="exp-tech"><strong>Tech:</strong> {exp.tech}</div>
+              
+              <ul className="exp-desc">
+                {exp.desc.map((item, j) => (
+                  <li key={j}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,0 +1,79 @@
+.contact-section {
+  padding: 100px 0 0;
+  position: relative;
+}
+
+.contact-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 40px !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.contact-desc {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin: 20px auto 40px;
+  max-width: 500px;
+}
+
+.contact-btn {
+  font-size: 16px !important;
+  padding: 16px 36px !important;
+  margin-bottom: 48px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-icon {
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.social-icon:hover {
+  color: var(--accent-primary);
+  background: rgba(108, 99, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+  border-top: 1px solid var(--border-subtle);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.footer p {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.footer-sub {
+  font-size: 11px !important;
+  margin-top: 8px;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    padding: 40px 24px !important;
+  }
+}
