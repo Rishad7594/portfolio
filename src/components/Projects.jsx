@@ -17,10 +17,10 @@ const projects = [
   },
   {
     title: 'Finance AI Platform',
-    tech: 'FastAPI • Python • Scikit-learn • NLP',
-    desc: 'AI-powered financial analytics dashboard combining fraud detection (IsolationForest), NLP-based sentiment analysis on financial news, and portfolio rebalancing engine.',
-    link: '#',
-    github: '#'
+    tech: 'FastAPI • PyTorch • DistilBERT • Docker • Render',
+    desc: 'AI-powered financial analytics platform featuring fraud detection (IsolationForest), news sentiment analysis (DistilBERT Transformers), stock forecasting (ARIMA), and portfolio risk rebalancing engine.',
+    link: 'https://finance-ai-platform.onrender.com',
+    github: 'https://github.com/Rishad7594/finance-ai-platform'
   },
   {
     title: 'Solar Power Prediction System',
