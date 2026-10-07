@@ -37,15 +37,15 @@
       margin: 20px auto;
       background: #ffffff;
       box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
-      padding: 19mm 22mm 18mm 22mm;
+      padding: 12mm 18mm 12mm 18mm;
       position: relative;
     }
 
     /* ===== HEADER ===== */
     .header {
       text-align: center;
-      margin-bottom: 14px;
-      padding-bottom: 12px;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
       border-bottom: 2px solid #000;
     }
 
@@ -77,15 +77,15 @@
       font-size: 9pt;
       color: #222;
       text-align: justify;
-      margin-bottom: 13px;
-      padding: 9px 14px;
+      margin-bottom: 10px;
+      padding: 7px 12px;
       background: #f5f5f5;
       border-radius: 3px;
     }
 
     /* ===== SECTION ===== */
     .section {
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
 
     .section-title {
@@ -95,13 +95,13 @@
       text-transform: uppercase;
       letter-spacing: 1.2px;
       border-bottom: 1.5px solid #999;
-      padding-bottom: 3px;
-      margin-bottom: 7px;
+      padding-bottom: 2px;
+      margin-bottom: 5px;
     }
 
     /* ===== EXPERIENCE ENTRY ===== */
     .exp-entry {
-      margin-bottom: 9px;
+      margin-bottom: 7px;
     }
 
     .exp-header {
@@ -241,7 +241,7 @@
 
     /* ===== INTERNSHIPS ===== */
     .intern-entry {
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .intern-header {
@@ -275,7 +275,7 @@
 
     /* ===== PROJECTS ===== */
     .project-entry {
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .project-name {
@@ -300,35 +300,51 @@
 
     /* ===== LANGUAGES ===== */
     .lang-row {
-      font-size: 8.5pt;
-      color: #222;
-      padding-left: 16px;
-      margin-left: 4px;
+      list-style: none;
+      padding-left: 8px;
+      margin-left: 0;
     }
 
     .lang-row li {
-      margin-bottom: 2px;
+      font-size: 8.5pt;
+      color: #222;
+      padding-left: 12px;
+      position: relative;
+      margin-bottom: 1px;
+    }
+
+    .lang-row li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #000;
+      font-weight: 700;
     }
 
     /* ===== PRINT ===== */
     @media print {
-      body {
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
+
+      html, body {
         background: #fff;
         margin: 0;
         padding: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
       }
 
       .page {
         width: 210mm;
-        height: 296mm;
-        /* Strictly A4 height to prevent spill */
+        box-sizing: border-box;
         margin: 0;
-        padding: 10mm 18mm 10mm 18mm;
-        /* Reduced padding for print */
+        padding: 8mm 16mm 8mm 16mm;
         box-shadow: none;
         page-break-after: always;
         page-break-inside: avoid;
-        overflow: hidden;
+        overflow: visible;
       }
     }
   </style>
@@ -356,12 +372,10 @@
 
     <!-- SUMMARY -->
     <div class="summary">
-      Full Stack Mobile and Web Developer skilled in Flutter, React/Next.js, and Native Android.
-      Experienced in building high-performance, user-centric apps and modern websites with scalable architecture and
-      clean UI/UX.
-      Proficient in integrating AI/ML features, REST APIs, Node.js, and Firebase. Strong data science foundation
-      enabling
-      predictive, data-aware solutions across web and mobile platforms.
+      Full Stack Mobile & Web Developer and Digital Marketing Specialist skilled in Flutter, React/Next.js, Node.js, and
+      performance marketing. Experienced in building scalable web/mobile applications, running high-ROI Meta Ads
+      campaigns (Meta Pixel tracking, audience retargeting), managing Google Business Profiles, and optimizing
+      conversion funnels with Google Analytics (GA4).
     </div>
 
     <!-- EDUCATION -->
@@ -370,18 +384,18 @@
 
       <div class="edu-entry">
         <div class="edu-left">
-          <span class="degree">Data Science & Artificial Intelligence</span>
-          <span class="school"> — EXCELR Solutions, Bangalore</span>
-        </div>
-        <div class="edu-right">2024 – 2025</div>
-      </div>
-
-      <div class="edu-entry">
-        <div class="edu-left">
           <span class="degree">Bachelor of Computer Application (BCA)</span>
           <span class="school"> — Concord Arts & Science College, Muttannur</span>
         </div>
         <div class="edu-right">2021 – 2024 | GPA: 5.61</div>
+      </div>
+
+      <div class="edu-entry">
+        <div class="edu-left">
+          <span class="degree">Data Science & Artificial Intelligence</span>
+          <span class="school"> — EXCELR Solutions, Bangalore</span>
+        </div>
+        <div class="edu-right">2024 – 2025</div>
       </div>
     </div>
 
@@ -395,7 +409,9 @@
         <div class="skill-row"><strong>Backend:</strong> Node.js, Express, Django, FastAPI, REST APIs</div>
         <div class="skill-row"><strong>Databases:</strong> PostgreSQL, Firebase Firestore, SQLite, MySQL, MongoDB</div>
         <div class="skill-row"><strong>AI/ML:</strong> TensorFlow, PyTorch, Keras, Scikit-learn, PyCaret, NLP</div>
-        <div class="skill-row"><strong>Cloud & Tools:</strong> Firebase, AWS (EC2/S3), Docker, Git, Postman</div>
+        <div class="skill-row"><strong>Cloud & Tools:</strong> Firebase, AWS (EC2/S3), Docker, Git, Gitea, Postman</div>
+        <div class="skill-row"><strong>Marketing & Analytics:</strong> Meta Ads Manager, Meta Pixel Tracking,
+          Retargeting, On-Page & Off-Page SEO, GA4, Monthly Performance Reporting</div>
         <div class="skill-row"><strong>Architecture:</strong> Clean Architecture, Provider, BLoC, CI/CD, Socket.IO</div>
       </div>
     </div>
@@ -404,23 +420,46 @@
     <div class="section">
       <div class="section-title">Professional Experience</div>
 
-      <!-- Pazel Global -->
+      <!-- Pazel Global - Full Stack Developer -->
       <div class="exp-entry">
         <div class="exp-header">
           <span class="role">Full Stack Developer</span>
-          <span class="dates">Mar 2025 – Present</span>
+          <span class="dates">Mar 2026 – Present</span>
         </div>
         <div class="exp-company">Pazel Global Technologies</div>
         <div class="exp-project">Project: Jolee — Real-time Service Marketplace App</div>
         <div class="exp-tech"><strong>Tech:</strong> Flutter, Node.js, Express, PostgreSQL, Knex.js, Socket.IO,
-          Provider, JWT, REST API</div>
+          Razorpay, Provider, JWT, REST API</div>
         <ul class="bullets">
           <li>Designed and developed a premium Flutter frontend with adaptive light/dark themes and Provider state
             management.</li>
-          <li>Built scalable RESTful API backend using Node.js & Express — authentication (JWT), job listings, payments,
-            and reviews.</li>
+          <li>Built scalable RESTful API backend using Node.js & Express — authentication (JWT), job listings, and
+            reviews.</li>
+          <li>Integrated Razorpay payment gateway for secure transactions, order processing, and payment verification.</li>
           <li>Designed PostgreSQL database models with Knex.js migrations for secure, optimized data access.</li>
           <li>Integrated Socket.IO for real-time chat and live notification updates between users.</li>
+        </ul>
+      </div>
+
+      <!-- Pazel Global - Digital Marketing -->
+      <div class="exp-entry">
+        <div class="exp-header">
+          <span class="role">Digital Marketing Specialist</span>
+          <span class="dates">Jul 2026 – Present</span>
+        </div>
+        <div class="exp-company">Pazel Global Technologies</div>
+        <div class="exp-project">Clients: Number One BC (Dubai), ThaniBinGhalita (Dubai), Doctorverse Healthcare
+          (Trivandrum)</div>
+        <div class="exp-tech"><strong>Tools:</strong> Meta Ads Manager, Meta Pixel Tracking, Audience Retargeting,
+          On-Page & Off-Page SEO, Google Analytics (GA4), Monthly Performance Reports</div>
+        <ul class="bullets">
+          <li>Managed performance marketing & growth strategies for client accounts.</li>
+          <li>Executed targeted Meta Ads (Facebook & Instagram) with Meta Pixel tracking setup, custom conversion event
+            mapping, and audience retargeting campaigns to maximize lead ROI.</li>
+          <li>Implemented comprehensive <strong>On-Page SEO</strong> (meta tags, site structure, content optimization)
+            and <strong>Off-Page SEO</strong> strategies (link building, local citations, domain authority).</li>
+          <li>Generated detailed <strong>monthly performance reports</strong> analyzing campaign ROI, cost-per-lead
+            (CPL), organic traffic growth, and conversion metrics using Google Analytics (GA4).</li>
         </ul>
       </div>
 
@@ -433,7 +472,7 @@
         <div class="exp-company">BSH Technologies</div>
         <div class="exp-project">Project: Eventify — Event Discovery & Booking App</div>
         <div class="exp-tech"><strong>Tech:</strong> Flutter, Django, Django REST Framework, JWT, PostgreSQL, Django
-          Admin, Git</div>
+          Admin, Git, Gitea</div>
         <ul class="bullets">
           <li>Developed cross-platform Flutter frontend with responsive layouts, smooth animations, and reusable UI
             components.</li>
@@ -441,10 +480,14 @@
             logic.</li>
           <li>Designed database models for users, events, and bookings with clean relationships and scalable structure.
           </li>
-          <li>Created Django Admin workflows and documented API endpoints for seamless front-end integration.</li>
+          <li>Created Django Admin workflows, managed repository workflows via Gitea, and documented API endpoints.</li>
         </ul>
       </div>
     </div>
+  </div><!-- end page 1 -->
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="page">
 
     <!-- INTERNSHIPS -->
     <div class="section">
@@ -456,7 +499,9 @@
           <span class="dates">Mar 2025 – Jun 2025</span>
         </div>
         <div class="intern-company">EXCELR Solutions, Bangalore</div>
-        <div class="intern-desc">Built an end-to-end AI finance platform featuring fraud detection (IsolationForest), news sentiment analysis (DistilBERT Transformers), stock forecasting (ARIMA), and portfolio rebalancing, containerized with Docker and deployed on Render.</div>
+        <div class="intern-desc">Built an end-to-end AI finance platform featuring fraud detection (IsolationForest),
+          news sentiment analysis (DistilBERT Transformers), stock forecasting (ARIMA), and portfolio rebalancing,
+          containerized with Docker and deployed on Render.</div>
       </div>
 
       <div class="intern-entry">
@@ -479,11 +524,6 @@
           a Streamlit dashboard, achieving 24% reduction in energy waste.</div>
       </div>
     </div>
-
-  </div><!-- end page 1 -->
-
-  <!-- ==================== PAGE 2 ==================== -->
-  <div class="page">
 
     <!-- FREELANCE EXPERIENCE -->
     <div class="section">
@@ -533,7 +573,12 @@
         <div class="project-name">Finance AI Platform</div>
         <div class="project-tech">| FastAPI, PyTorch, DistilBERT, IsolationForest, ARIMA, Docker, Render</div>
         <div class="project-desc">
-          Modular AI financial platform deployed via Docker on Render (<a href="https://finance-ai-platform.onrender.com" target="_blank" style="color: #0066cc; text-decoration: none;">https://finance-ai-platform.onrender.com</a>). Features transaction fraud/anomaly detection (IsolationForest), news sentiment analysis, intraday stock price forecasting (ARIMA + market sentiment weighting), and portfolio risk rebalancing engine with live Chart.js visualization.
+          Modular AI financial platform deployed via Docker on Render (<a
+            href="https://finance-ai-platform.onrender.com" target="_blank"
+            style="color: #000000; text-decoration: none;">https://finance-ai-platform.onrender.com</a>). Features
+          transaction fraud/anomaly detection (IsolationForest), news sentiment analysis, intraday stock price
+          forecasting (ARIMA + market sentiment weighting), and portfolio risk rebalancing engine with live Chart.js
+          visualization.
         </div>
       </div>
 

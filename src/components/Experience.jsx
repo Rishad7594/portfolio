@@ -6,10 +6,11 @@ const experiences = [
     company: 'Pazel Global Technologies',
     dates: 'Mar 2025 – Present',
     project: 'Project: Jolee — Real-time Service Marketplace App',
-    tech: 'Flutter, Node.js, Express, PostgreSQL, Knex.js, Socket.IO, Provider, JWT, REST API',
+    tech: 'Flutter, Node.js, Express, PostgreSQL, Knex.js, Socket.IO, Razorpay, Provider, JWT, REST API',
     desc: [
       'Designed and developed a premium Flutter frontend with adaptive light/dark themes and Provider state management.',
-      'Built scalable RESTful API backend using Node.js & Express — authentication (JWT), job listings, payments, and reviews.',
+      'Built scalable RESTful API backend using Node.js & Express — authentication (JWT), job listings, and reviews.',
+      'Integrated Razorpay payment gateway for secure transactions, order processing, and payment verification.',
       'Designed PostgreSQL database models with Knex.js migrations for secure, optimized data access.',
       'Integrated Socket.IO for real-time chat and live notification updates between users.'
     ]
