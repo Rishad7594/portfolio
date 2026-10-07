@@ -7,6 +7,7 @@ const experiences = [
     dates: 'Mar 2025 – Present',
     project: 'Project: Jolee — Real-time Service Marketplace App, Web (jolee.in) & Admin Panel',
     link: 'https://jolee.in',
+    linkText: 'jolee.in',
     tech: 'Flutter, React/Next.js, Node.js, Express, PostgreSQL, Knex.js, Socket.IO, Razorpay, Provider, JWT, REST API',
     desc: [
       'Designed and developed a premium Flutter frontend with adaptive light/dark themes and Provider state management.',
@@ -24,6 +25,8 @@ const experiences = [
     company: 'BSH Technologies',
     dates: 'Jun 2025 – Mar 2026',
     project: 'Project: Eventify — Event Discovery & Booking App',
+    link: 'https://play.google.com/store/apps/details?id=com.sicherhaven.eventify',
+    linkText: 'Play Store',
     tech: 'Flutter, Django, Django REST Framework, JWT, PostgreSQL, Django Admin, Git',
     desc: [
       'Developed cross-platform Flutter frontend with responsive layouts, smooth animations, and reusable UI components.',
@@ -76,7 +79,7 @@ export default function Experience() {
                         className="exp-live-btn"
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <span>jolee.in</span>
+                        <span>{exp.linkText || 'Visit'}</span>
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                           <polyline points="15 3 21 3 21 9"></polyline>
